@@ -11,7 +11,13 @@ subprojects {
 
     }
 
-    tasks.withType<ProcessResources>() {
+    tasks.register<Copy>("deploy") {
+        dependsOn("shadowJar")
+        from(tasks.get("shadowJar").outputs.files)
+        into("../build/libs")
+    }
+
+    tasks.withType<ProcessResources> {
         filter {
             it.replace("{version}", project.version.toString())
         }
