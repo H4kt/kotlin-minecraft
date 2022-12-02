@@ -8,6 +8,8 @@ In your plugin.yml add a dependecy to a corresponding module that you are using 
 depend: [<module name goes here>]
 ```
 
+Add required modules into your plugins folder
+
 ## Available modules:
 ### [Kotlin](https://github.com/JetBrains/kotlin)
 * kotlin-stdlib - Kotlin standart library (required)
