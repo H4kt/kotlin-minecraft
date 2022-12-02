@@ -1,0 +1,6 @@
+name: kotlinx-serialization-core
+main: io.h4kt.kotlinx.plugin.bukkit.KotlinxSerializationCore
+authors: [H4kt, JetBrains Team]
+version: {version}
+depends: [kotlin-stdlib]
+api-version: 1.13

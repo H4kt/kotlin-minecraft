@@ -1,0 +1,6 @@
+name: exposed-jdbc
+main: io.h4kt.exposed.plugin.bukkit.ExposedJDBC
+authors: [H4kt, JetBrains Team]
+version: {version}
+depends: [kotlin-stdlib, kotlin-reflect, kotlinx-coroutines, exposed-core]
+api-version: 1.13

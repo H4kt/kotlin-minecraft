@@ -1,0 +1,4 @@
+name: kotlin-stdlib
+main: io.h4kt.kotlin.plugin.bungee.KotlinStdLib
+authors: [H4kt, JetBrains Team]
+version: {version}

@@ -1,0 +1,6 @@
+name: exposed-core
+main: io.h4kt.exposed.plugin.bukkit.ExposedCore
+authors: [H4kt, JetBrains Team]
+version: {version}
+depends: [kotlin-stdlib, kotlin-reflect, kotlinx-coroutines]
+api-version: 1.13
