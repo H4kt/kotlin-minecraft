@@ -1,6 +1,8 @@
 # kotlin-minecraft
 A simple wrapper of most of the commonly used kotlin libraries for Bukkit and Bungeecord
 
+## ⚠️ Java 8 is no longer supported due to Exposed requiring Java 11+ 
+
 ## Installation
 In your plugin.yml add a dependecy to a corresponding module that you are using in your code:
 ```yml

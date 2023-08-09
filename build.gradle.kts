@@ -1,4 +1,12 @@
+import org.jetbrains.kotlin.gradle.tasks.UsesKotlinJavaToolchain
+
+plugins {
+    kotlin("jvm") apply false
+}
+
 subprojects {
+
+    apply(plugin = "org.jetbrains.kotlin.jvm")
 
     repositories {
 
@@ -9,6 +17,16 @@ subprojects {
             url = uri("https://repo.papermc.io/repository/maven-public/")
         }
 
+    }
+
+    val service = project.extensions.getByType<JavaToolchainService>()
+
+    val customJavaLauncher = service.launcherFor {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+
+    tasks.withType<UsesKotlinJavaToolchain> {
+        kotlinJavaToolchain.toolchain.use(customJavaLauncher)
     }
 
     tasks.register<Copy>("deploy") {
