@@ -3,6 +3,10 @@ A simple wrapper of most of the commonly used kotlin libraries for Bukkit and Bu
 
 ## ⚠️ Java 8 is no longer supported due to Exposed requiring Java 11+ 
 
+## Roadmap
+- [ ] Include other modules of Exposed: kotlin-datetime, json, crypt
+- [ ] Automate builds & releases based on uploads to Maven Central
+
 ## Installation
 In your plugin.yml add a dependecy to a corresponding module that you are using in your code:
 ```yml
