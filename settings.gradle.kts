@@ -10,7 +10,7 @@ pluginManagement {
 
 }
 
-rootProject.name = "kotlin"
+rootProject.name = "kotlin-minecraft"
 include(
     ":stdlib",
     ":reflect",
