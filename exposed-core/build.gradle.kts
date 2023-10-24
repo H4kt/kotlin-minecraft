@@ -13,10 +13,12 @@ version = exposedVersion
 
 dependencies {
 
-    api("org.jetbrains.exposed:exposed-core:$exposedVersion") {
+    api("org.jetbrains.exposed:exposed-jdbc:$exposedVersion") {
         exclude(group = "org.jetbrains.kotlin")
         exclude(group = "org.jetbrains.kotlinx")
     }
+
+    api("org.postgresql:postgresql:42.6.0")
 
     shadow(project(":stdlib"))
     shadow(project(":reflect"))

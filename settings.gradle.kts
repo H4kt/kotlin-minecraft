@@ -19,6 +19,5 @@ include(
     ":serialization-core",
     ":serialization-json",
     ":exposed-core",
-    ":exposed-dao",
-    ":exposed-jdbc"
+    ":exposed-dao"
 )
