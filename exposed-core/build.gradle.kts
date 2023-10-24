@@ -18,7 +18,9 @@ dependencies {
         exclude(group = "org.jetbrains.kotlinx")
     }
 
-    api("org.postgresql:postgresql:42.6.0")
+    api("org.postgresql:postgresql:42.6.0") {
+        exclude(group = "org.slf4j")
+    }
 
     shadow(project(":stdlib"))
     shadow(project(":reflect"))
@@ -31,6 +33,9 @@ dependencies {
 
 tasks.jar {
     archiveFileName.set("${project.name}-${project.version}.jar")
+    from(configurations.shadow) {
+        exclude("META-INF/MANIFEST.MF")
+    }
 }
 
 tasks.withType<ShadowJar> {
