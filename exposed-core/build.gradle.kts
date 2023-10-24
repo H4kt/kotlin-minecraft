@@ -1,4 +1,7 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import com.github.jengelman.gradle.plugins.shadow.transformers.ManifestAppenderTransformer
+import com.github.jengelman.gradle.plugins.shadow.transformers.ManifestResourceTransformer
+import java.util.jar.Attributes
 
 plugins {
     kotlin("jvm")
@@ -18,26 +21,22 @@ dependencies {
         exclude(group = "org.jetbrains.kotlinx")
     }
 
-    api("org.postgresql:postgresql:42.6.0") {
-        exclude(group = "org.slf4j")
-    }
+    api("org.postgresql:postgresql:42.6.0")
 
-    shadow(project(":stdlib"))
-    shadow(project(":reflect"))
-    shadow(project(":coroutines"))
+    compileOnly(project(":stdlib"))
+    compileOnly(project(":reflect"))
+    compileOnly(project(":coroutines"))
 
-    shadow("net.md-5:bungeecord-api:${bungeeVersion}")
-    shadow("com.destroystokyo.paper:paper-api:${paperVersion}")
+    compileOnly("net.md-5:bungeecord-api:${bungeeVersion}")
+    compileOnly("com.destroystokyo.paper:paper-api:${paperVersion}")
 
 }
 
 tasks.jar {
-    archiveFileName.set("${project.name}-${project.version}.jar")
-    from(configurations.shadow) {
-        exclude("META-INF/MANIFEST.MF")
-    }
+    archiveFileName.set("${project.name}-${project.version}-slim.jar")
 }
 
 tasks.withType<ShadowJar> {
     archiveFileName.set("${project.name}-${project.version}.jar")
+    mergeServiceFiles()
 }
