@@ -33,5 +33,5 @@ Add required modules into your plugins folder
 
 ### [Exposed](https://github.com/JetBrains/Exposed)
 * exposed-core - Exposed core implementation (required for any other exposed module)
-* exposed-jdbc - Exposed jdbc implementation
+* ~~exposed-jdbc - Exposed jdbc implementation~~ Is now included in `exposed-core` due to incompatibility between java service resolution and plugin class loading
 * exposed-dao - Exposed dao implementation
