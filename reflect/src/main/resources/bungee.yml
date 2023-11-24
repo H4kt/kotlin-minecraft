@@ -1,5 +1,5 @@
 name: kotlin-reflect
-main: io.h4kt.kotlin.plugin.bungee.KotlinReflect
+main: dev.h4kt.kotlin.plugin.bungee.KotlinReflect
 authors: [H4kt, JetBrains Team]
-version: {version}
+version: ${version}
 depends: [kotlin-stdlib]

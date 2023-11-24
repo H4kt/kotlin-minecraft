@@ -1,5 +1,5 @@
 name: exposed-core
-main: io.h4kt.exposed.plugin.bungee.ExposedCore
+main: dev.h4kt.exposed.plugin.bungee.ExposedCore
 authors: [H4kt, JetBrains Team]
-version: {version}
+version: ${version}
 depends: [kotlin-stdlib, kotlin-reflect, kotlinx-coroutines]

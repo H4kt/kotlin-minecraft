@@ -1,0 +1,11 @@
+name: kotlinx-serialization-core
+main: dev.h4kt.kotlinx.plugin.bukkit.KotlinxSerializationCore
+authors: [H4kt, JetBrains Team]
+version: ${version}
+api-version: "1.20"
+dependencies:
+  server:
+    kotlin-stdlib:
+      load: BEFORE
+      required: true
+      join-classpath: true

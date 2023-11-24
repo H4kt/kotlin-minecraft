@@ -9,36 +9,24 @@ subprojects {
     apply(plugin = "org.jetbrains.kotlin.jvm")
 
     repositories {
-
         mavenCentral()
-
-        maven {
-            name = "PaperMC"
-            url = uri("https://repo.papermc.io/repository/maven-public/")
-        }
-
+        maven("https://repo.papermc.io/repository/maven-public")
     }
 
     val service = project.extensions.getByType<JavaToolchainService>()
 
-    val customJavaLauncher = service.launcherFor {
-        languageVersion.set(JavaLanguageVersion.of(11))
+    val customJavaCompiler = service.compilerFor {
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 
-    tasks.withType<UsesKotlinJavaToolchain> {
-        kotlinJavaToolchain.toolchain.use(customJavaLauncher)
+    tasks.withType<JavaCompile> {
+        javaCompiler.set(customJavaCompiler)
     }
 
     tasks.register<Copy>("deploy") {
         dependsOn("shadowJar")
-        from(tasks.get("shadowJar").outputs.files)
+        from(tasks["shadowJar"].outputs.files)
         into("../build/libs")
-    }
-
-    tasks.withType<ProcessResources> {
-        filter {
-            it.replace("{version}", project.version.toString())
-        }
     }
 
 }

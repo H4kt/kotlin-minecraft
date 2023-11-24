@@ -1,0 +1,6 @@
+name: kotlin-stdlib
+main: dev.h4kt.kotlin.plugin.bukkit.KotlinStdLib
+bootstrapper: dev.h4kt.kotlin.plugin.paper.KotlinStdLibBootstrapper
+authors: [H4kt, JetBrains Team]
+version: ${version}
+api-version: "1.20"

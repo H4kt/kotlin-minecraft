@@ -1,0 +1,5 @@
+name: kotlinx-serialization-kaml
+main: dev.h4kt.kotlinx.plugin.bungee.KotlinxSerializationKaml
+authors: [H4kt, charleskorn]
+version: ${version}
+depends: [kotlin-stdlib, kotlinx-serialization-core]

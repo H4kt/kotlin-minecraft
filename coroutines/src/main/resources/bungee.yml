@@ -1,5 +1,5 @@
 name: kotlinx-coroutines
-main: io.h4kt.kotlinx.plugin.bungee.KotlinxCoroutines
+main: dev.h4kt.kotlinx.plugin.bungee.KotlinxCoroutines
 authors: [H4kt, JetBrains Team]
-version: {version}
+version: ${version}
 depends: [kotlin-stdlib]

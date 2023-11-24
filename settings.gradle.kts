@@ -11,13 +11,14 @@ pluginManagement {
 }
 
 rootProject.name = "kotlin-minecraft"
+
 include(
     ":stdlib",
     ":reflect",
     ":coroutines",
     ":datetime",
-    ":serialization-core",
-    ":serialization-json",
     ":exposed-core",
     ":exposed-dao"
 )
+
+includeBuild("serialization")

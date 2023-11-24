@@ -1,6 +1,6 @@
 name: kotlinx-datetime
-main: io.h4kt.kotlinx.plugin.bukkit.KotlinxDateTime
+main: dev.h4kt.kotlinx.plugin.bukkit.KotlinxDateTime
 authors: [H4kt, JetBrains Team]
-version: {version}
+version: ${version}
 depends: [kotlin-stdlib]
 api-version: 1.13

@@ -1,0 +1,6 @@
+name: kotlinx-serialization-kaml
+main: dev.h4kt.kotlinx.plugin.bukkit.KotlinxSerializationKaml
+authors: [H4kt, charleskorn]
+version: ${version}
+depends: [kotlin-stdlib, kotlinx-serialization-core]
+api-version: 1.13

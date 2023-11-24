@@ -1,6 +1,6 @@
 name: exposed-dao
-main: io.h4kt.exposed.plugin.bukkit.ExposedDao
+main: dev.h4kt.exposed.plugin.bukkit.ExposedDao
 authors: [H4kt, JetBrains Team]
-version: {version}
+version: ${version}
 depends: [kotlin-stdlib, kotlin-reflect, kotlinx-coroutines, exposed-core]
 api-version: 1.13

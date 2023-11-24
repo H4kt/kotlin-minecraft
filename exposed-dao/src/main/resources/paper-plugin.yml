@@ -1,0 +1,23 @@
+name: exposed-dao
+main: dev.h4kt.exposed.plugin.bukkit.ExposedDao
+authors: [H4kt, JetBrains Team]
+version: ${version}
+api-version: "1.20"
+dependencies:
+  server:
+    kotlin-stdlib:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    kotlin-reflect:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    kotlinx-coroutines:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    exposed-core:
+      load: BEFORE
+      required: false
+      join-classpath: true

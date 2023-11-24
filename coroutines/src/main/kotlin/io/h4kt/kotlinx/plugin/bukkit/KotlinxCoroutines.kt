@@ -1,4 +1,4 @@
-package io.h4kt.kotlinx.plugin.bukkit
+package dev.h4kt.kotlinx.plugin.bukkit
 
 import org.bukkit.plugin.java.JavaPlugin
 

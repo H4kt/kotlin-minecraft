@@ -1,0 +1,12 @@
+name: kotlin-reflect
+main: dev.h4kt.kotlin.plugin.bukkit.KotlinReflect
+bootstrapper: dev.h4kt.kotlin.plugin.paper.KotlinReflectBootstrapper
+authors: [H4kt, JetBrains Team]
+version: ${version}
+api-version: "1.20"
+dependencies:
+  server:
+    kotlin-stdlib:
+      load: BEFORE
+      required: true
+      join-classpath: true

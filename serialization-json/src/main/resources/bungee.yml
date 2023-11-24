@@ -1,5 +1,0 @@
-name: kotlinx-serialization-json
-main: io.h4kt.kotlinx.plugin.bungee.KotlinxSerializationJson
-authors: [H4kt, JetBrains Team]
-version: {version}
-depends: [kotlin-stdlib, kotlinx-serialization-core]

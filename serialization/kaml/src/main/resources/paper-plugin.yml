@@ -1,0 +1,15 @@
+name: kotlinx-serialization-kaml
+main: dev.h4kt.kotlinx.plugin.bukkit.KotlinxSerializationKaml
+authors: [H4kt, charleskorn]
+version: ${version}
+api-version: "1.20"
+dependencies:
+  server:
+    kotlin-stdlib:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    kotlinx-serialization-core:
+      load: BEFORE
+      required: true
+      join-classpath: true
